@@ -6,7 +6,7 @@ from posts_routes import create_posts_blueprint
 
 app = Flask(__name__)
 
-db = yaml.load(open('db.yaml'), Loader=yaml.FullLoader)
+db = yaml.load(open('part8-blog/db.yaml'), Loader=yaml.FullLoader)
 app.config['MYSQL_HOST'] = db['mysql_host']
 app.config['MYSQL_USER'] = db['mysql_user']
 app.config['MYSQL_PASSWORD'] = db['mysql_password']
